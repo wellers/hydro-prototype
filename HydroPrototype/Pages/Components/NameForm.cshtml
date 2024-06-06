@@ -1,0 +1,8 @@
+@model NameForm
+
+<div>
+    <!-- the default trigger event is change -->
+    <input asp-for="FirstName" hydro-bind />
+    <input asp-for="LastName" hydro-bind />
+    <span>Full name: @Model.FirstName @Model.LastName</span>
+</div>
