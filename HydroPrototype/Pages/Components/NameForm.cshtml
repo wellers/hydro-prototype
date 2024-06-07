@@ -1,8 +1,18 @@
 @model NameForm
 
-<div>
-    <!-- the default trigger event is change -->
-    <input asp-for="FirstName" hydro-bind />
-    <input asp-for="LastName" hydro-bind />
-    <span>Full name: @Model.FirstName @Model.LastName</span>
+<div class="row">
+    <div class="col-xs-6">
+        <div class="form-floating" style="margin-bottom: 10px;">
+            <!-- the default trigger event is change when hydro-bind is specified -->
+            <input class="form-control" id="floatingFirstName" placeholder="First name" asp-for="FirstName" hydro-bind/>
+            <label for="floatingFirstName">First name</label>
+        </div>
+        <div class="form-floating" style="margin-bottom: 10px;">
+            <input class="form-control" id="floatingLastName" placeholder="Last name" asp-for="LastName" hydro-bind/>
+            <label for="floatingLastName">Last name</label>
+        </div>
+        <div class="col-xs-12">
+            <span>Full name: @Model.FirstName @Model.LastName</span>
+        </div>
+    </div>
 </div>

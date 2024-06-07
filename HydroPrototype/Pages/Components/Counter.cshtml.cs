@@ -5,7 +5,7 @@ namespace HydroPrototype.Pages.Components;
 
 public class Counter(IMemoryCache memoryCache) : HydroComponent
 {
-	public string CacheKey { get; set; } = "default";
+	public string CacheKey { get; init; } = "default";
 	
 	public int Count { get; set; }
 

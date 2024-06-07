@@ -1,0 +1,25 @@
+@model ContactsList
+<div>
+@if (Model.Contacts is { Count: > 0 })
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th class="pb-4">Title</th>
+            <th class="pb-4">FirstName</th>
+            <th class="pb-4">LastName</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var contact in Model.Contacts)
+        {
+            <tr>
+                <td class="pb-4">@contact.Title</td>
+                <td class="pb-4">@contact.FirstName</td>
+                <td class="pb-4">@contact.LastName</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+</div>

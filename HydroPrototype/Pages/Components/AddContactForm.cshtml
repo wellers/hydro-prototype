@@ -1,0 +1,22 @@
+@model AddContactForm
+
+<div class="row">
+    <div class="col-md-4">
+        <label class="form-label" asp-for="Title"></label>
+        <input class="form-control" asp-for="Title" hydro-bind />
+        <span class="invalid-feedback" style="display: inline" asp-validation-for="Title"></span>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" asp-for="FirstName"></label>
+        <input class="form-control" asp-for="FirstName" hydro-bind />
+        <span class="invalid-feedback" style="display: inline" asp-validation-for="FirstName"></span>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" asp-for="LastName"></label>
+        <input class="form-control" asp-for="LastName" hydro-bind />
+        <span class="invalid-feedback" style="display: inline" asp-validation-for="LastName"></span>
+    </div>
+    <div class="col-md-12">
+        <button class="btn btn-primary" style="margin-top: 10px;" type="submit" hydro-on:click="@(() => Model.Submit())">Add</button>    
+    </div>
+</div>
