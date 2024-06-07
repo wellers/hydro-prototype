@@ -4,19 +4,19 @@
 {
     <table class="table">
         <thead>
-        <tr>
-            <th class="pb-4">Title</th>
-            <th class="pb-4">FirstName</th>
-            <th class="pb-4">LastName</th>
-        </tr>
+            <tr class="d-flex">
+                <th class="col-4 pb-4">Title</th>
+                <th class="col-4 pb-4">First name</th>
+                <th class="col-4 pb-4">Last name</th>
+            </tr>
         </thead>
         <tbody>
         @foreach (var contact in Model.Contacts)
         {
-            <tr>
-                <td class="pb-4">@contact.Title</td>
-                <td class="pb-4">@contact.FirstName</td>
-                <td class="pb-4">@contact.LastName</td>
+            <tr class="d-flex">
+                <td class="col-4 pb-4">@contact.Title</td>
+                <td class="col-4 pb-4">@contact.FirstName</td>
+                <td class="col-4 pb-4">@contact.LastName</td>
             </tr>
         }
         </tbody>

@@ -1,0 +1,27 @@
+@model LoginForm
+
+@if (Model.Authenticated)
+{
+    <div>You are already authenticated.</div>
+}
+else
+{
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-floating" style="margin-bottom: 10px;">
+                <!-- the default trigger event is change when hydro-bind is specified -->
+                <input class="form-control" id="floatingUsername" placeholder="Username" asp-for="Username" hydro-bind/>
+                <label for="floatingUsername">Username</label>
+                <span class="invalid-feedback" style="display: inline" asp-validation-for="Username"></span>
+            </div>
+            <div class="form-floating" style="margin-bottom: 10px;">
+                <input class="form-control" id="floatingPassword" placeholder="Password" asp-for="Password" hydro-bind/>
+                <label for="floatingPassword">Password</label>
+                <span class="invalid-feedback" style="display: inline" asp-validation-for="Password"></span>
+            </div>
+            <div class="col-xs-12">
+                <button class="btn btn-primary" style="margin-top: 10px;" type="submit" hydro-on:click="@(() => Model.Submit())">Login</button>
+            </div>
+        </div>
+    </div>
+}
